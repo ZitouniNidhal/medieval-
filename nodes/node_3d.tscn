@@ -511,7 +511,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.25359, 3.82604, 9.14353)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7729, 0, 2.00856)
 
 [node name="Mage" parent="CharacterBody3D" instance=ExtResource("96_hyhhi")]
+transform = Transform3D(0.719495, 0, 0, 0, 0.719495, 0, 0, 0, 0.719495, 2, 0, 0)
 script = ExtResource("97_mthn4")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(0.998949, -0.0148877, -0.0433513, 0.0411776, 0.706927, 0.706087, 0.0201342, -0.70713, 0.706797, 3.86893, 13.786, 14.6992)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Camera3D"]
