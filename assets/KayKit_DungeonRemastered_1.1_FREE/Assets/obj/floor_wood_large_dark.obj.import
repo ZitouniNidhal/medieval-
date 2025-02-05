@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ryqg8wng7t8p"
+path="res://.godot/imported/floor_wood_large_dark.obj-f1e151c4adf46a32c18990eb6a28f21a.mesh"
+
+[deps]
+
+files=["res://.godot/imported/floor_wood_large_dark.obj-f1e151c4adf46a32c18990eb6a28f21a.mesh"]
+
+source_file="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/obj/floor_wood_large_dark.obj"
+dest_files=["res://.godot/imported/floor_wood_large_dark.obj-f1e151c4adf46a32c18990eb6a28f21a.mesh", "res://.godot/imported/floor_wood_large_dark.obj-f1e151c4adf46a32c18990eb6a28f21a.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
