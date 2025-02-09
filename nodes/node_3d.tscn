@@ -70,7 +70,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.246, 0, 30.067)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.996, 0, 44.696)
 
 [node name="wall_endcap4" parent="." instance=ExtResource("21_dd23h")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50.3206, 0.0486941, 31.0539)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50.7239, 0.0486941, 43.0539)
 
 [node name="wall_doorway_Tsplit2" parent="." instance=ExtResource("22_rmnfn")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 30.1079, 9.53674e-07, 35.9029)
@@ -748,7 +748,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.0007, 0, 16.8338)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7729, 0, 2.00856)
 
 [node name="Mage" parent="CharacterBody3D" instance=ExtResource("96_hyhhi")]
-transform = Transform3D(0.728964, 0, 0, 0, 0.728964, 0, 0, 0, 0.728964, 18.1996, -0.248422, 32.5213)
+transform = Transform3D(0.728964, 0, 0, 0, 0.728964, 0, 0, 0, 0.728964, 18.1996, 9.41438, 32.5213)
 script = ExtResource("97_mthn4")
 
 [node name="Skeleton3D" type="Skeleton3D" parent="CharacterBody3D"]
