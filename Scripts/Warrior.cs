@@ -40,7 +40,7 @@ public partial class Warrior : Node3D
         if (_velocity.Length() > 0)
         {
             _velocity = _velocity.Normalized() * _speed;
-            LookAt(GlobalTransform.Origin + new Vector3(_velocity.X, 0, _velocity.z), Vector3.Up);
+            LookAt(GlobalTransform.Origin + new Vector3(_velocity.X, 0, _velocity.Z), Vector3.Up);
         }
 
         GlobalTransform = new Transform3D(GlobalTransform.Basis, GlobalTransform.Origin + _velocity * (float)delta);
