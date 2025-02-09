@@ -29,18 +29,18 @@ public partial class Warrior : Node3D
         _velocity = Vector3.Zero;
 
         if (Input.IsActionPressed("ui_right"))
-            _velocity.x += 1;
+            _velocity.X += 1;
         if (Input.IsActionPressed("ui_left"))
-            _velocity.x -= 1;
+            _velocity.X -= 1;
         if (Input.IsActionPressed("ui_up"))
-            _velocity.z -= 1;
+            _velocity.Z -= 1;
         if (Input.IsActionPressed("ui_down"))
-            _velocity.z += 1;
+            _velocity.Z += 1;
 
         if (_velocity.Length() > 0)
         {
             _velocity = _velocity.Normalized() * _speed;
-            LookAt(GlobalTransform.Origin + new Vector3(_velocity.x, 0, _velocity.z), Vector3.Up);
+            LookAt(GlobalTransform.Origin + new Vector3(_velocity.X, 0, _velocity.z), Vector3.Up);
         }
 
         GlobalTransform = new Transform3D(GlobalTransform.Basis, GlobalTransform.Origin + _velocity * (float)delta);
