@@ -1,4 +1,4 @@
-[gd_scene load_steps=76 format=3 uid="uid://c5fmmdwwobq31"]
+[gd_scene load_steps=102 format=3 uid="uid://c5fmmdwwobq31"]
 
 [ext_resource type="PackedScene" uid="uid://bx7mfdlnuf2mf" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/gltf/wall_open_scaffold.gltf" id="3_54uas"]
 [ext_resource type="PackedScene" uid="uid://wasjr34n5x5j" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/gltf/wall_scaffold.gltf" id="5_js46q"]
@@ -42,6 +42,7 @@
 [ext_resource type="PackedScene" uid="uid://by1jn5j7j7qqj" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/fbx/wall_corner.fbx" id="47_gw8no"]
 [ext_resource type="PackedScene" uid="uid://ccmepibs1m4vx" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/fbx/wall_arched.fbx" id="48_7axfi"]
 [ext_resource type="PackedScene" uid="uid://dri35criwf31e" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/fbx/box_stacked.fbx" id="48_kejfo"]
+[ext_resource type="PackedScene" uid="uid://bi7dngha1sjv2" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/fbx/ceiling_tile.fbx" id="49_mwgwh"]
 [ext_resource type="PackedScene" uid="uid://d0fxvrsxj4shd" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/fbx/chair.fbx" id="50_402v2"]
 [ext_resource type="PackedScene" uid="uid://ck65o2f21f6w" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/fbx/coin_stack_large.fbx" id="50_ldq66"]
 [ext_resource type="PackedScene" uid="uid://c7ldib2mryqq1" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/fbx/chest.fbx" id="51_a58cy"]
@@ -58,7 +59,6 @@
 [ext_resource type="PackedScene" uid="uid://dm8xyh01aavta" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/fbx/wall_doorway_sides.fbx" id="62_1a40h"]
 [ext_resource type="PackedScene" uid="uid://sjlgi1g8cd3d" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/fbx/banner_blue.fbx" id="62_sly1u"]
 [ext_resource type="PackedScene" uid="uid://dbvyfant2xwhd" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/fbx/wall_gated.fbx" id="63_c27at"]
-[ext_resource type="PackedScene" uid="uid://3n51qd5sl1e1" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/fbx/wall_open_scaffold.fbx" id="65_n4m4l"]
 [ext_resource type="PackedScene" uid="uid://cl12t5o2c5k6o" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/fbx/wall_pillar.fbx" id="66_gqy7n"]
 [ext_resource type="PackedScene" uid="uid://cal0iqm1j4el1" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/fbx/wall_shelves.fbx" id="67_aphx2"]
 [ext_resource type="PackedScene" uid="uid://duo54k8rjj2op" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/fbx/wall_Tsplit_sloped.fbx" id="68_nwko4"]
@@ -68,11 +68,37 @@
 [ext_resource type="PackedScene" uid="uid://davyx2ybk15ak" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/fbx/trunk_medium_A.fbx" id="71_fpo6r"]
 [ext_resource type="PackedScene" uid="uid://d4lunw2xx2nto" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/fbx/floor_wood_large.fbx" id="72_s25fo"]
 [ext_resource type="PackedScene" uid="uid://djh8l4g2qitjl" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/fbx/floor_wood_small.fbx" id="73_o6l47"]
+[ext_resource type="PackedScene" uid="uid://qkr47bj1pgyc" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/fbx/torch_mounted.fbx" id="73_pq1hm"]
+[ext_resource type="PackedScene" uid="uid://thfl5tmlvfhe" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/fbx/stool.fbx" id="74_5jxmg"]
 [ext_resource type="PackedScene" uid="uid://bebj5tb6twl10" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/fbx/bottle_A_brown.fbx" id="74_s5276"]
+[ext_resource type="PackedScene" uid="uid://eafg0j8pdas4" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/fbx/sword_shield.fbx" id="75_530d4"]
+[ext_resource type="PackedScene" uid="uid://c0bnqfugebe23" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/fbx/sword_shield_broken.fbx" id="76_e025k"]
+[ext_resource type="PackedScene" uid="uid://cowyp13umgi1w" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/fbx/stairs_wall_right.fbx" id="77_koys4"]
 [ext_resource type="PackedScene" uid="uid://be8n48jcs57kr" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/fbx/chest_gold.fbx" id="77_mly27"]
+[ext_resource type="PackedScene" uid="uid://b4tnk7bwcpr8g" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/fbx/stairs_wide.fbx" id="78_3dhod"]
+[ext_resource type="PackedScene" uid="uid://b8lehos8om7um" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/fbx/stairs_wall_left.fbx" id="79_88b26"]
+[ext_resource type="PackedScene" uid="uid://dpq5d0nkltvju" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/fbx/stairs_walled.fbx" id="80_7sof0"]
+[ext_resource type="PackedScene" uid="uid://d2xfxn3emy3yp" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/fbx/stairs_narrow.fbx" id="81_2uwti"]
+[ext_resource type="PackedScene" uid="uid://dcwe4qghnte36" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/fbx/stairs_modular_right.fbx" id="82_7cxcp"]
+[ext_resource type="PackedScene" uid="uid://boe0bmp1d1qy7" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/fbx/stairs_modular_left.fbx" id="83_rp0lr"]
+[ext_resource type="PackedScene" uid="uid://6glvqf3pkss4" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/fbx/stairs_modular_center.fbx" id="84_rp6kv"]
+[ext_resource type="PackedScene" uid="uid://51gfylntsrui" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/fbx/stairs_long_modular_right.fbx" id="85_g2vtw"]
+[ext_resource type="PackedScene" uid="uid://dsjusn7ifhuq3" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/fbx/stairs_long_modular_left.fbx" id="86_acere"]
+[ext_resource type="PackedScene" uid="uid://jdvqtw0xwle8" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/fbx/stairs_long_modular_center.fbx" id="87_xgtra"]
+[ext_resource type="PackedScene" uid="uid://5tjy3snbo6yk" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/fbx/stairs_long.fbx" id="88_q1h66"]
+[ext_resource type="PackedScene" uid="uid://bikodfvjx3u2x" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/fbx/stairs.fbx" id="89_h1vws"]
+[ext_resource type="PackedScene" uid="uid://bo2r03liwy8uf" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/fbx/shelves.fbx" id="90_h4yne"]
+[ext_resource type="PackedScene" uid="uid://bsolrvn2ra2sv" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/fbx/shelf_small_candles.fbx" id="91_5yqw6"]
+[ext_resource type="PackedScene" uid="uid://dtk30ovbn3qb0" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/fbx/shelf_large.fbx" id="92_gsb6l"]
+[ext_resource type="PackedScene" uid="uid://b0nee7srv81qn" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/fbx/rubble_half.fbx" id="93_bbrnw"]
+[ext_resource type="PackedScene" uid="uid://dw0lkh8vyw0da" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/fbx/floor_wood_small_dark.fbx" id="94_051ny"]
+[ext_resource type="PackedScene" uid="uid://b7luj7c6wi4lq" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/fbx/floor_tile_small_weeds_B.fbx" id="95_5uch7"]
 [ext_resource type="PackedScene" uid="uid://3e2fe888swm5" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/fbx/floor_tile_large.fbx" id="95_u25cc"]
+[ext_resource type="PackedScene" uid="uid://bglaxbxo8f70k" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/fbx/floor_tile_small_broken_B.fbx" id="96_clhui"]
 [ext_resource type="PackedScene" uid="uid://brdejm4lfxfps" path="res://Characters/KayKit_Adventurers_1.0_FREE/KayKit_Adventurers_1.0_FREE/Characters/fbx/Mage.fbx" id="96_hyhhi"]
+[ext_resource type="PackedScene" uid="uid://bpwgeqdnd4d5j" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/fbx/column.fbx" id="97_fn3aj"]
 [ext_resource type="Script" path="res://Scripts/Mage.cs" id="97_mthn4"]
+[ext_resource type="PackedScene" uid="uid://dqrrrl5ng2g4j" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/fbx/candle_triple.fbx" id="99_j3p30"]
 
 [sub_resource type="Animation" id="Animation_ks75b"]
 resource_name = "new_animation"
@@ -106,7 +132,7 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 48.756
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 55.1173, 0, 39.9955)
 
 [node name="wall_Tsplit3" parent="." instance=ExtResource("8_0o170")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 38.0729, 0, 45.8134)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 38.1299, 0, 45.8134)
 
 [node name="wall_window_closed_scaffold2" parent="." instance=ExtResource("11_fslrx")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 30.1076, 0.00886631, 29.8999)
@@ -2038,7 +2064,7 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 23.080
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 10.2571, 0, 45.7293)
 
 [node name="wall4" parent="." instance=ExtResource("42_wgkb4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.3139, 0, 37.8718)
+transform = Transform3D(1, 0, 0, 0, 0.999775, -0.0212042, 0, 0.0212042, 0.999775, 14.3139, 0, 37.8718)
 
 [node name="wall7" parent="." instance=ExtResource("42_wgkb4")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 10.2793, 0, 41.7848)
@@ -2266,7 +2292,7 @@ transform = Transform3D(-0.0452235, 0, 0.998977, 0, 1, 0, -0.998977, 0, -0.04522
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.2581, -1.90735e-06, 33.3432)
 
 [node name="wall_arched2" parent="." instance=ExtResource("48_7axfi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.5617, 0, 3.04856)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.682, 0, 3.04856)
 
 [node name="wall_archedwindow_gated" parent="." instance=ExtResource("37_eff8y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.6286, 0, 3.00616)
@@ -2321,9 +2347,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.8271, 0, -15.2347)
 
 [node name="wall_half_endcap_sloped2" parent="." instance=ExtResource("34_l01hh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.3493, 0, -14.474)
-
-[node name="wall_open_scaffold" parent="." instance=ExtResource("65_n4m4l")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52.9023, 4.07565, 31.06)
 
 [node name="wall_pillar" parent="." instance=ExtResource("66_gqy7n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.0436, 0, -16.3426)
@@ -2390,3 +2413,126 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 53.8146, 4.17939, 40.2993)
 
 [node name="floor_wood_small2" parent="." instance=ExtResource("73_o6l47")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 53.8146, 4.17452, 41.7131)
+
+[node name="wall_arched3" parent="." instance=ExtResource("48_7axfi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 55.503, 0, -25.1756)
+
+[node name="wall_archedwindow_gated2" parent="." instance=ExtResource("37_eff8y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 62.8094, 0, -18.5217)
+
+[node name="wall_archedwindow_gated_scaffold3" parent="." instance=ExtResource("35_lwj3k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54.862, 0, -25.7737)
+
+[node name="wall_broken2" parent="." instance=ExtResource("58_xn8tb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 67.4404, 0, -27.0065)
+
+[node name="wall_corner11" parent="." instance=ExtResource("47_gw8no")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 77.3425, 0, -27.2889)
+
+[node name="wall_corner_gated2" parent="." instance=ExtResource("59_p0ma8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 75.9299, 0, -28.8517)
+
+[node name="wall_doorway5" parent="." instance=ExtResource("43_sael5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 73.9456, 0, -30.5425)
+
+[node name="wall_gated2" parent="." instance=ExtResource("63_c27at")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 71.3209, 0, -32.0233)
+
+[node name="wall_endcap6" parent="." instance=ExtResource("39_le7gf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 67.2166, 0, -27.9918)
+
+[node name="wall_shelves4" parent="." instance=ExtResource("67_aphx2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52.4874, 3.98264, 31.2264)
+
+[node name="wall_Tsplit_sloped2" parent="." instance=ExtResource("68_nwko4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 70.8248, 0, -28.7739)
+
+[node name="torch_mounted" parent="." instance=ExtResource("73_pq1hm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 70.5861, 0, -7.58466)
+
+[node name="stool" parent="." instance=ExtResource("74_5jxmg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 74.7562, 0, -8.14952)
+
+[node name="sword_shield" parent="." instance=ExtResource("75_530d4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 73.2486, 11.8754, -49.7733)
+
+[node name="sword_shield_broken" parent="." instance=ExtResource("76_e025k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65.4986, 0, -31.6596)
+
+[node name="stairs_wall_right" parent="." instance=ExtResource("77_koys4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 57.641, 0, -34.7155)
+
+[node name="stairs_wide" parent="." instance=ExtResource("78_3dhod")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.8718, 9.53674e-07, -33.6382)
+
+[node name="stairs_wall_left" parent="." instance=ExtResource("79_88b26")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56.588, 4.01791, 31.1672)
+
+[node name="stairs_walled" parent="." instance=ExtResource("80_7sof0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 74.0901, 0, 8.43652)
+
+[node name="stairs_narrow" parent="." instance=ExtResource("81_2uwti")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65.1107, 0, -3.60801)
+
+[node name="stairs_modular_right" parent="." instance=ExtResource("82_7cxcp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 55.0017, 0, -11.2352)
+
+[node name="stairs_modular_left" parent="." instance=ExtResource("83_rp0lr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 66.3036, 0, -11.259)
+
+[node name="stairs_modular_center" parent="." instance=ExtResource("84_rp6kv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 71.1512, 0, -7.63474)
+
+[node name="stairs_long_modular_right" parent="." instance=ExtResource("85_g2vtw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 73.2284, 0, -6.23604)
+
+[node name="stairs_long_modular_left" parent="." instance=ExtResource("86_acere")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68.69, 0, -10.9168)
+
+[node name="stairs_long_modular_center" parent="." instance=ExtResource("87_xgtra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60.629, 0, -11.7974)
+
+[node name="stairs_long" parent="." instance=ExtResource("88_q1h66")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 53.8551, 0, -16.8082)
+
+[node name="stairs" parent="." instance=ExtResource("89_h1vws")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.6986, 0, -4.14544)
+
+[node name="shelves" parent="." instance=ExtResource("90_h4yne")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65.4888, 0, 11.7785)
+
+[node name="shelf_small_candles" parent="." instance=ExtResource("91_5yqw6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68.0928, 0, -12.8254)
+
+[node name="shelf_large" parent="." instance=ExtResource("92_gsb6l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 77.6847, 0, 2.58567)
+
+[node name="rubble_half" parent="." instance=ExtResource("93_bbrnw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 66.6791, 0, -10.5465)
+
+[node name="plate_food_A2" parent="." instance=ExtResource("55_5btse")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 77.2409, 0, 4.40431)
+
+[node name="floor_wood_small_dark" parent="." instance=ExtResource("94_051ny")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 77.3715, 0, -1.9539)
+
+[node name="floor_tile_small_weeds_B" parent="." instance=ExtResource("95_5uch7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 79.6641, 0, 4.33527)
+
+[node name="floor_tile_small_broken_B" parent="." instance=ExtResource("96_clhui")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 81.4788, 0, 6.54337)
+
+[node name="column" parent="." instance=ExtResource("97_fn3aj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 61.1003, 3.9616, 31.0318)
+
+[node name="coin_stack_small2" parent="." instance=ExtResource("52_aqhhx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 78.5052, 0, 9.06612)
+
+[node name="coin_stack_large2" parent="." instance=ExtResource("50_ldq66")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 78.0085, 0, 4.74245)
+
+[node name="ceiling_tile" parent="." instance=ExtResource("49_mwgwh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 81.6372, 0, 8.8441)
+
+[node name="candle_triple" parent="." instance=ExtResource("99_j3p30")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 77.4235, 14.8271, -27.8896)
