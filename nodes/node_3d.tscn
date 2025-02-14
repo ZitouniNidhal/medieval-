@@ -1,4 +1,4 @@
-[gd_scene load_steps=79 format=3 uid="uid://c5fmmdwwobq31"]
+[gd_scene load_steps=76 format=3 uid="uid://c5fmmdwwobq31"]
 
 [ext_resource type="PackedScene" uid="uid://bx7mfdlnuf2mf" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/gltf/wall_open_scaffold.gltf" id="3_54uas"]
 [ext_resource type="PackedScene" uid="uid://wasjr34n5x5j" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/gltf/wall_scaffold.gltf" id="5_js46q"]
@@ -64,10 +64,7 @@
 [ext_resource type="PackedScene" uid="uid://cfscigbpbmqp2" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/gltf/coin_stack_large.gltf" id="74_8p2nw"]
 [ext_resource type="PackedScene" uid="uid://bebj5tb6twl10" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/fbx/bottle_A_brown.fbx" id="74_s5276"]
 [ext_resource type="PackedScene" uid="uid://dx5gbjqqqxrl8" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/gltf/column.gltf" id="75_s8tur"]
-[ext_resource type="PackedScene" uid="uid://dapmku2bonydo" path="res://Characters/KayKit_Skeletons_1.0_FREE/KayKit_Skeletons_1.0_FREE/characters/gltf/Skeleton_Minion.glb" id="76_1brrc"]
-[ext_resource type="PackedScene" uid="uid://lujmgo3ypk7s" path="res://Characters/KayKit_Skeletons_1.0_FREE/KayKit_Skeletons_1.0_FREE/characters/gltf/Skeleton_Mage.glb" id="77_7ikdf"]
 [ext_resource type="PackedScene" uid="uid://be8n48jcs57kr" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/fbx/chest_gold.fbx" id="77_mly27"]
-[ext_resource type="PackedScene" uid="uid://dskg1kfhdh21j" path="res://Characters/KayKit_Skeletons_1.0_FREE/KayKit_Skeletons_1.0_FREE/characters/gltf/Skeleton_Warrior.glb" id="78_osmel"]
 [ext_resource type="PackedScene" uid="uid://x0d23s34y55q" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/fbx/crates_stacked.fbx" id="78_qj74l"]
 [ext_resource type="PackedScene" uid="uid://b8lehos8om7um" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/fbx/stairs_wall_left.fbx" id="79_88b26"]
 [ext_resource type="PackedScene" uid="uid://bsolrvn2ra2sv" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/fbx/shelf_small_candles.fbx" id="91_5yqw6"]
@@ -2366,12 +2363,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 53.5394, 4.2325, 33.6728)
 
 [node name="column3" parent="." instance=ExtResource("75_s8tur")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.7125, 0, 19.9048)
-
-[node name="Skeleton_Minion" parent="." instance=ExtResource("76_1brrc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.9024, -9.53674e-07, 15.8807)
-
-[node name="Skeleton_Mage" parent="." instance=ExtResource("77_7ikdf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.0289, 0, 13.8172)
-
-[node name="Skeleton_Warrior" parent="." instance=ExtResource("78_osmel")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.6798, 0, 17.3887)
