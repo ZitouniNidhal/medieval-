@@ -1,6 +1,7 @@
 using Godot;
 using System;
-
+namespace MedievalGame.Scripts
+{
 public class CameraController : Camera
 {
     // Parameters for camera behavior
@@ -52,4 +53,5 @@ public class CameraController : Camera
         pitchAngle = Mathf.Clamp(pitchAngle, -Mathf.Pi / 2 + 0.1f, Mathf.Pi / 2 - 0.1f);
         return Basis.CreateFromEuler(new Vector3(-pitchAngle, basis.GetEuler().y, 0));
     }
+}
 }
