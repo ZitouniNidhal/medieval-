@@ -1,6 +1,8 @@
 using Godot;
 using System;
 
+namespace MedievalGame.Scripts
+{
 public class BarbarianMovement : KinematicBody
 {
     // Paramètres de mouvement
@@ -113,4 +115,5 @@ public class BarbarianMovement : KinematicBody
             }
         }
     }
+}
 }
