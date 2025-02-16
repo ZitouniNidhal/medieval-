@@ -33,7 +33,7 @@ public class CameraController : Camera3D
         cameraBasis = LimitPitch(cameraBasis);
 
         // Apply the vertical rotation to the camera
-        Transform = new Transform(cameraBasis, GlobalTransform.origin);
+        Transform = new Transform3D(cameraBasis, GlobalTransform.origin);
 
         // Handle zooming
         float zoomInput = Input.GetActionStrength("ui_zoom_in") - Input.GetActionStrength("ui_zoom_out");
