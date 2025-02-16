@@ -39,7 +39,7 @@ public class CameraController : Camera3D
         float zoomInput = Input.GetActionStrength("ui_zoom_in") - Input.GetActionStrength("ui_zoom_out");
         if (zoomInput != 0)
         {
-            offset.Length = Mathf.Clamp(offset.Length - zoomInput * zoomSpeed, minZoom, maxZoom);
+            offset.Length = Mathf.Clamp(offset.Length() - zoomInput * zoomSpeed, minZoom, maxZoom);
         }
 
         // Update the camera position relative to the player
