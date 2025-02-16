@@ -22,7 +22,7 @@ namespace MedievalGame.Scripts
         public override void _Ready()
         {
             // Initialiser les références aux nœuds enfants
-            animPlayer = GetNodeOrNull<AnimationPlayer>("AnimationPlayer");
+            animPlayer = GetNode<AnimationPlayer>("AnimationPlayer");
             if (animPlayer == null)
             {
                 GD.PrintErr("Aucun AnimationPlayer trouvé dans la scène.");
