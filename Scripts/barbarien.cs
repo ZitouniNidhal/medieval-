@@ -3,7 +3,7 @@ using System;
 
 namespace MedievalGame.Scripts
 {
-    public class BarbarianMovement : KinematicBody
+    public class BarbarianMovement : KinematicBody3D
     {
         // Paramètres de mouvement
         private Vector3 velocity = Vector3.Zero; // Vitesse actuelle du barbare
