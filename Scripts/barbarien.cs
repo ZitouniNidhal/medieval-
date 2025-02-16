@@ -34,7 +34,7 @@ namespace MedievalGame.Scripts
             HandleMovement(delta);
             ApplyGravity(delta);
             HandleJump();
-            MoveAndSlide();
+            MoveAndSlide(velocity);
         }
 
         private void HandleMovement(float delta)
