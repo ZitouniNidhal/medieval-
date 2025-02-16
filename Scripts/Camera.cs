@@ -2,7 +2,7 @@ using Godot;
 using System;
 namespace MedievalGame.Scripts
 {
-public class CameraController : Camera
+public class CameraController : Camera3D
 {
     // Parameters for camera behavior
     private Vector3 offset = new Vector3(0, 2, -5); // Initial camera offset from the player
