@@ -2377,3 +2377,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 53.5394, 4.2325, 33.6728)
 
 [node name="column3" parent="." instance=ExtResource("75_s8tur")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.7125, 0, 19.9048)
+
+[node name="column4" parent="." instance=ExtResource("75_s8tur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.7051, 0, 19.9048)
