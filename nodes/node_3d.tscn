@@ -1,4 +1,4 @@
-[gd_scene load_steps=75 format=3 uid="uid://c5fmmdwwobq31"]
+[gd_scene load_steps=76 format=3 uid="uid://c5fmmdwwobq31"]
 
 [ext_resource type="PackedScene" uid="uid://bx7mfdlnuf2mf" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/gltf/wall_open_scaffold.gltf" id="3_54uas"]
 [ext_resource type="PackedScene" uid="uid://wasjr34n5x5j" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/gltf/wall_scaffold.gltf" id="5_js46q"]
@@ -56,8 +56,10 @@
 [ext_resource type="PackedScene" uid="uid://yadf8ymr6l3p" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/gltf/banner_shield_green.gltf" id="70_dc1hj"]
 [ext_resource type="PackedScene" uid="uid://drb00gx5isk80" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/fbx/bed_decorated.fbx" id="71_7m8la"]
 [ext_resource type="PackedScene" uid="uid://d17eklw04hldt" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/gltf/box_small_decorated.gltf" id="71_waq7c"]
+[ext_resource type="PackedScene" uid="uid://cqvfix2wdmo85" path="res://Characters/KayKit_Adventurers_1.0_FREE/KayKit_Adventurers_1.0_FREE/Characters/gltf/Barbarian.glb" id="72_6o1u1"]
 [ext_resource type="PackedScene" uid="uid://dw1geckki6qyu" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/gltf/candle.gltf" id="72_k6jy5"]
 [ext_resource type="PackedScene" uid="uid://d4lunw2xx2nto" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/fbx/floor_wood_large.fbx" id="72_s25fo"]
+[ext_resource type="PackedScene" uid="uid://kpamv2vm6rjj" path="res://Characters/KayKit_Adventurers_1.0_FREE/KayKit_Adventurers_1.0_FREE/Characters/gltf/Rogue_Hooded.glb" id="73_8hsmn"]
 [ext_resource type="PackedScene" uid="uid://djdnmqxnvckm" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/gltf/coin.gltf" id="73_i3q80"]
 [ext_resource type="PackedScene" uid="uid://djh8l4g2qitjl" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/fbx/floor_wood_small.fbx" id="73_o6l47"]
 [ext_resource type="PackedScene" uid="uid://qkr47bj1pgyc" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/fbx/torch_mounted.fbx" id="73_pq1hm"]
@@ -70,7 +72,6 @@
 [ext_resource type="PackedScene" uid="uid://bsolrvn2ra2sv" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/fbx/shelf_small_candles.fbx" id="91_5yqw6"]
 [ext_resource type="PackedScene" uid="uid://3e2fe888swm5" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/fbx/floor_tile_large.fbx" id="95_u25cc"]
 [ext_resource type="PackedScene" uid="uid://bpwgeqdnd4d5j" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/fbx/column.fbx" id="97_fn3aj"]
-[ext_resource type="Script" path="res://Scripts/Mage.cs" id="97_mthn4"]
 [ext_resource type="PackedScene" uid="uid://c568t17bb47bl" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/fbx/candle_thin_lit.fbx" id="101_heeve"]
 
 [sub_resource type="Animation" id="Animation_ks75b"]
@@ -1943,20 +1944,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.0007, 0, 16.8338)
 [node name="CharacterBody3D" type="CharacterBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7729, 0, 2.00856)
 
-[node name="Mage" parent="CharacterBody3D"]
-_import_path = NodePath("")
-unique_name_in_owner = false
-process_mode = 0
-process_priority = 0
-process_physics_priority = 0
-process_thread_group = 0
-physics_interpolation_mode = 0
-auto_translate_mode = 0
-editor_description = ""
-transform = Transform3D(-0.655978, 0, 0.317932, 0, 0.728964, 0, -0.317932, 0, -0.655978, 11.5381, -0.0690606, 14.2942)
-script = ExtResource("97_mthn4")
-
-[node name="AnimationTree" type="AnimationTree" parent="CharacterBody3D/Mage"]
+[node name="CharacterBody3D_Mage#AnimationTree" type="AnimationTree" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_alx7h")
 }
@@ -2235,7 +2223,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.425, 0, 23.246)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.425, 0, 18.8451)
 
 [node name="box_stacked3" parent="." instance=ExtResource("48_kejfo")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.425, 7.53586, 18.8451)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.4647, 0.405967, 40.9026)
 
 [node name="chair" parent="." instance=ExtResource("50_402v2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.8726, 0, 22.0229)
@@ -2380,3 +2368,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.7125, 0, 19.9048)
 
 [node name="column4" parent="." instance=ExtResource("75_s8tur")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.7051, 0, 19.9048)
+
+[node name="Barbarian" parent="." instance=ExtResource("72_6o1u1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.26594, 0, 15.1564)
+
+[node name="Rogue_Hooded" parent="." instance=ExtResource("73_8hsmn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.0122, 0.156686, 40.967)
