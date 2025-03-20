@@ -1,4 +1,4 @@
-[gd_scene load_steps=76 format=3 uid="uid://c5fmmdwwobq31"]
+[gd_scene load_steps=75 format=3 uid="uid://c5fmmdwwobq31"]
 
 [ext_resource type="PackedScene" uid="uid://bx7mfdlnuf2mf" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/gltf/wall_open_scaffold.gltf" id="3_54uas"]
 [ext_resource type="PackedScene" uid="uid://wasjr34n5x5j" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/gltf/wall_scaffold.gltf" id="5_js46q"]
@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://ch2k5muatd4vx" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/gltf/wall_Tsplit.gltf" id="8_0o170"]
 [ext_resource type="PackedScene" uid="uid://bvogxk2t6oo8e" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/gltf/wall_window_closed_scaffold.gltf" id="11_fslrx"]
 [ext_resource type="PackedScene" uid="uid://p74ymb7vqdx" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/gltf/table_long_decorated_A.gltf" id="15_b3btl"]
-[ext_resource type="PackedScene" uid="uid://bmij4ac27jnu4" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/fbx/trunk_medium_C.fbx" id="19_jxsrl"]
 [ext_resource type="PackedScene" uid="uid://bltp2lwi1pu8o" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/fbx(unity)/wall_corner_small.fbx" id="22_o2wew"]
 [ext_resource type="PackedScene" uid="uid://b4dkqbuad11ej" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/gltf/wall_doorway_Tsplit.gltf" id="22_rmnfn"]
 [ext_resource type="PackedScene" uid="uid://b4sjydd2evju5" path="res://assets/KayKit_DungeonRemastered_1.1_FREE/Assets/fbx(unity)/wall_doorway.fbx" id="23_15cfy"]
@@ -2263,9 +2262,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52.5087, 4.00678, 42.9589)
 
 [node name="wall_pillar" parent="." instance=ExtResource("66_gqy7n")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 48.7896, 3.99784, 39.1859)
-
-[node name="trunk_medium_C" parent="." instance=ExtResource("19_jxsrl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.8771, 0, -24.6706)
 
 [node name="floor_wood_large" parent="." instance=ExtResource("72_s25fo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50.837, 4.15092, 33.3608)
