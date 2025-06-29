@@ -55,15 +55,11 @@ namespace MedievalGame.Scripts
                 _camera.LookAt(GlobalTransform.Origin, Vector3.Up);
             }
         }
-          private void UpdateCameraPosition()
+        public void CastSpell()
         {
-            if (_camera != null)
-            {
-                // Positionne la caméra derrière et au-dessus du Mage
-                _camera.GlobalTransform = new Transform3D(_camera.GlobalTransform.Basis, GlobalTransform.Origin + _cameraOffset);
-                // Oriente la caméra vers le Mage
-                _camera.LookAt(GlobalTransform.Origin, Vector3.Up);
-            }
+            // Logique pour lancer un sort
+            GD.Print("Casting spell!");
+            // Ici, tu peux ajouter des effets visuels ou sonores pour le sort
         }
     }
 }

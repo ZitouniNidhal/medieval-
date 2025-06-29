@@ -3,12 +3,17 @@ using System;
 
 namespace MedievalGame.Scripts
 {
-    public class BarbarianMovement : CharacterBody3D
+    public partial class BarbarianMovement : CharacterBody3D
 
     {
         // Paramètres de mouvement
         private Vector3 velocity = Vector3.Zero; // Vitesse actuelle du barbare
-        [Export] public float Speed = 8.0f; // Vitesse de déplacement (exportable dans l'éditeur)
+        [Export] private float speed = 8.0f; // Vitesse de déplacement (exportable dans l'éditeur)
+        public float Speed
+        {
+            get => speed;
+            set => speed = value;
+        }
         [Export] public float JumpSpeed = 15.0f; // Force de saut (exportable dans l'éditeur)
         [Export] public float Gravity = -9.81f; // Gravité (exportable dans l'éditeur)
 
@@ -36,6 +41,11 @@ namespace MedievalGame.Scripts
             ApplyGravity(delta);
             HandleJump();
             MoveAndSlide(velocity);
+        }
+
+        private void HandleMovement(double delta)
+        {
+            throw new NotImplementedException();
         }
 
         private void HandleMovement(float delta)
