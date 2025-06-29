@@ -3,7 +3,7 @@ using System;
 
 namespace MedievalGame.Scripts
 {
-    public class CameraController : Camera3D
+    public partial class CameraController : Camera3D
     {
         // Paramètres pour le comportement de la caméra
         private Vector3 offset = new Vector3(0, 2, -5); // Décalage initial de la caméra par rapport au joueur
@@ -18,33 +18,37 @@ namespace MedievalGame.Scripts
             Current = true;
         }
 
-        public override void _Process(float delta)
+        public void _Process(float delta)
         {
             // Récupère l'entrée utilisateur pour la rotation de la caméra
             float rotateHorizontal = Input.GetActionStrength("mouse_motion_x") * -rotationSpeed; // Rotation horizontale selon l'entrée de la souris
             float rotateVertical = Input.GetActionStrength("mouse_motion_y") * -rotationSpeed; // Rotation verticale selon l'entrée de la souris
 
             // Rotation horizontale de la caméra autour du joueur
-            Transform parentTransform = GetParent().Transform; // Obtient la transformation de l'objet parent (supposé être le joueur)
-            parentTransform.Basis = parentTransform.Basis.Rotated(Basis.VectorUp, rotateHorizontal); // Applique la rotation horizontale
-            GetParent().Transform = parentTransform; // Met à jour la transformation du parent
+            var parentNode = GetParent() as Node3D; // Obtient le parent en tant que Node3D (supposé être le joueur)
+            if (parentNode == null)
+                return;
+            Transform3D parentTransform = parentNode.Transform; // Obtient la transformation de l'objet parent
+            parentTransform.Basis = parentTransform.Basis.Rotated(Vector3.Up, rotateHorizontal); // Applique la rotation horizontale
+            ((Node3D)GetParent()).Transform = parentTransform; // Met à jour la transformation du parent
 
             // Rotation verticale de la caméra en limitant l'inclinaison pour éviter un retournement
-            Basis cameraBasis = Basis.Rotated(Basis.VectorRight, rotateVertical); // Applique la rotation verticale à la caméra
+            Basis cameraBasis = Basis.Rotated(Vector3.Right, rotateVertical); // Applique la rotation verticale à la caméra
             cameraBasis = LimitPitch(cameraBasis); // Limite l'angle d'inclinaison vertical de la caméra
 
             // Applique la rotation verticale calculée à la caméra
-            Transform = new Transform3D(cameraBasis, GlobalTransform.origin); // Met à jour la transformation globale de la caméra
+            Transform = new Transform3D(cameraBasis, GlobalTransform.Origin); // Met à jour la transformation globale de la caméra
 
             // Gestion du zoom de la caméra
             float zoomInput = Input.GetActionStrength("ui_zoom_in") - Input.GetActionStrength("ui_zoom_out"); // Calcul de l'entrée de zoom (entrée utilisateur)
             if (zoomInput != 0)
             {
-                offset.Length = Mathf.Clamp(offset.Length() - zoomInput * zoomSpeed, minZoom, maxZoom); // Ajuste la distance de l'offset selon l'entrée utilisateur
+                float newLength = Mathf.Clamp(offset.Length() - zoomInput * zoomSpeed, minZoom, maxZoom); // Calcule la nouvelle longueur de l'offset
+                offset = offset.Normalized() * newLength; // Applique la nouvelle longueur à l'offset
             }
 
             // Mise à jour de la position de la caméra par rapport au joueur
-            GlobalTransform.origin = GetParent().GlobalTransform.origin + parentTransform.Basis.Xform(offset); // Applique l'offset calculé au parent
+            GlobalTransform.origin = ((Node3D)GetParent()).GlobalTransform.origin + parentTransform.Basis.Xform(offset); // Applique l'offset calculé au parent
         }
 
         private Basis LimitPitch(Basis basis)
