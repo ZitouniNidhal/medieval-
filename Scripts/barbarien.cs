@@ -3,7 +3,8 @@ using System;
 
 namespace MedievalGame.Scripts
 {
-    public class BarbarianMovement : KinematicBody
+    public class BarbarianMovement : CharacterBody3D
+
     {
         // Paramètres de mouvement
         private Vector3 velocity = Vector3.Zero; // Vitesse actuelle du barbare
@@ -29,7 +30,7 @@ namespace MedievalGame.Scripts
             }
         }
 
-        public override void _PhysicsProcess(float delta)
+        public override void _PhysicsProcess(double delta)
         {
             HandleMovement(delta);
             ApplyGravity(delta);
