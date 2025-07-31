@@ -4,30 +4,28 @@ using System;
 namespace MedievalGame.Scripts
 {
     public partial class BarbarianMovement : CharacterBody3D
-
     {
         // Paramètres de mouvement
-        private Vector3 velocity = Vector3.Zero; // Vitesse actuelle du barbare
-        [Export] private float speed = 8.0f; // Vitesse de déplacement (exportable dans l'éditeur)
+        private Vector3 velocity = Vector3.Zero;
+        [Export] private float speed = 8.0f;
         public float Speed
         {
             get => speed;
             set => speed = value;
         }
-        [Export] public float JumpSpeed = 15.0f; // Force de saut (exportable dans l'éditeur)
-        [Export] public float Gravity = -9.81f; // Gravité (exportable dans l'éditeur)
+        [Export] public float JumpSpeed = 15.0f;
+        [Export] public float Gravity = -9.81f;
 
         // Paramètres d'attaque
-        [Export] public float AttackRange = 2.0f; // Portée de l'attaque (exportable dans l'éditeur)
-        [Export] public float AttackDamage = 10.0f; // Dégâts infligés par l'attaque (exportable dans l'éditeur)
-        private bool isAttacking = false; // Indique si le barbare est en train d'attaquer
+        [Export] public float AttackRange = 2.0f;
+        [Export] public float AttackDamage = 10.0f;
+        private bool isAttacking = false;
 
         // Référence à l'AnimationPlayer
         private AnimationPlayer animPlayer;
 
         public override void _Ready()
         {
-            // Initialiser les références aux nœuds enfants
             animPlayer = GetNode<AnimationPlayer>("AnimationPlayer");
             if (animPlayer == null)
             {
@@ -37,59 +35,48 @@ namespace MedievalGame.Scripts
 
         public override void _PhysicsProcess(double delta)
         {
-            HandleMovement(delta);
-            ApplyGravity(delta);
+            HandleMovement((float)delta); // Convertir explicitement en float
+            ApplyGravity((float)delta);
             HandleJump();
-            MoveAndSlide(velocity);
-        }
-
-        private void HandleMovement(double delta)
-        {
-            throw new NotImplementedException();
+            HandleAttack();
+            MoveAndSlide();
         }
 
         private void HandleMovement(float delta)
         {
-            // Input pour le mouvement horizontal
-            Vector3 inputDirection = new Vector3();
+            Vector2 inputDir = Input.GetVector("ui_left", "ui_right", "ui_up", "ui_down");
+            Vector3 direction = new Vector3(inputDir.X, 0, inputDir.Y).Normalized();
 
-            if (Input.IsActionPressed("ui_right")) inputDirection.x += 1.0f;
-            if (Input.IsActionPressed("ui_left")) inputDirection.x -= 1.0f;
-            if (Input.IsActionPressed("ui_down")) inputDirection.z += 1.0f;
-            if (Input.IsActionPressed("ui_up")) inputDirection.z -= 1.0f;
-
-            // Normaliser la direction pour éviter une vitesse plus rapide en diagonale
-            if (inputDirection.LengthSquared() > 0)
+            if (direction != Vector3.Zero)
             {
-                inputDirection = inputDirection.Normalized();
+                velocity.X = direction.X * Speed;
+                velocity.Z = direction.Z * Speed;
             }
-
-            // Appliquer la vitesse horizontale
-            velocity.x = inputDirection.x * Speed;
-            velocity.z = inputDirection.z * Speed;
+            else
+            {
+                velocity.X = Mathf.MoveToward(velocity.X, 0, Speed);
+                velocity.Z = Mathf.MoveToward(velocity.Z, 0, Speed);
+            }
         }
 
         private void ApplyGravity(float delta)
         {
-            // Appliquer la gravité
             if (!IsOnFloor())
             {
-                velocity.y += Gravity * delta;
+                velocity.Y += Gravity * delta;
             }
         }
 
         private void HandleJump()
         {
-            // Saut
             if (IsOnFloor() && Input.IsActionJustPressed("ui_accept"))
             {
-                velocity.y = JumpSpeed;
+                velocity.Y = JumpSpeed;
             }
         }
 
         private void HandleAttack()
         {
-            // Attaque
             if (Input.IsActionJustPressed("ui_attack") && !isAttacking)
             {
                 Attack();
@@ -98,45 +85,32 @@ namespace MedievalGame.Scripts
 
         private void Attack()
         {
-            // Définir que le barbare est en train d'attaquer
             isAttacking = true;
+            animPlayer?.Play("Attack");
 
-            // Jouer une animation d'attaque (si disponible)
-            if (animPlayer != null)
-            {
-                animPlayer.Play("Attack"); // Assurez-vous que vous avez une animation nommée "Attack"
-            }
-
-            // Attendre la fin de l'animation avant de permettre une nouvelle attaque
             GetTree().CreateTimer(1.0f).Timeout += () =>
             {
-                isAttacking = false; // Réinitialiser l'état d'attaque après 1 seconde
+                isAttacking = false;
             };
 
-            // Détecter les ennemis dans la portée de l'attaque
             DetectEnemiesInRange();
         }
 
         private void DetectEnemiesInRange()
         {
-            // Créer un rayon ou une sphère pour détecter les ennemis
-            Vector3 attackPosition = GlobalTransform.origin + Transform.basis.Z * AttackRange;
-            PhysicsDirectSpaceState spaceState = GetWorld().DirectSpaceState;
+            PhysicsDirectSpaceState3D spaceState = GetWorld3D().DirectSpaceState;
+            Vector3 start = GlobalPosition;
+            Vector3 end = start + -GlobalTransform.Basis.Z * AttackRange;
 
-            // Configuration de la requête de collision
-            TypedArray<PhysicsShapeQueryResult> results = spaceState.IntersectRay(
-                GlobalTransform.origin,
-                attackPosition,
-                new string[] { "Enemy" } // Filtrer par groupe "Enemy"
-            );
+            var query = PhysicsRayQueryParameters3D.Create(start, end);
+            query.CollisionMask = 1; // Layer par défaut
+            query.HitFromInside = true;
 
-            // Parcourir les résultats et appliquer les dégâts
-            foreach (var result in results)
+            var result = spaceState.IntersectRay(query);
+
+            if (result.Count > 0 && result["collider"].As<Node>() is Node enemyNode && enemyNode.IsInGroup("Enemy"))
             {
-                if (result.Collider is Node enemyNode && enemyNode.HasMethod("TakeDamage"))
-                {
-                    enemyNode.Call("TakeDamage", AttackDamage);
-                }
+                enemyNode.Call("TakeDamage", AttackDamage);
             }
         }
     }
